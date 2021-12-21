@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/standard_sheet"
+    style="?attr/bottomSheetStyle"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="56dp"
+    app:backgroundTint="?attr/colorButtonNormal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_up" />
+
+    <TextView
+        android:id="@+id/header_standard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Hello! This is Header of Standard Bottom Sheet"
+        app:layout_constraintBottom_toBottomOf="@+id/img_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_standard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="Standard Sheet A"
+        app:layout_constraintBottom_toTopOf="@+id/tv_b"
+        app:layout_constraintEnd_toEndOf="@+id/tv_d"
+        app:layout_constraintStart_toStartOf="@+id/tv_d"
+        app:layout_constraintTop_toBottomOf="@+id/img_standard"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="Standard Sheet B"
+        app:layout_constraintBottom_toTopOf="@+id/tv_c"
+        app:layout_constraintEnd_toEndOf="@+id/tv_d"
+        app:layout_constraintStart_toStartOf="@+id/tv_d"
+        app:layout_constraintTop_toBottomOf="@+id/tv_a" />
+
+    <TextView
+        android:id="@+id/tv_c"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="Standard Sheet C"
+        app:layout_constraintBottom_toTopOf="@+id/tv_d"
+        app:layout_constraintEnd_toEndOf="@+id/tv_d"
+        app:layout_constraintStart_toStartOf="@+id/tv_d"
+        app:layout_constraintTop_toBottomOf="@+id/tv_b" />
+
+    <TextView
+        android:id="@+id/tv_d"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="Standard Sheet D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_c" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
