@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
 
+    private val modalSheet : ModalBottomSheet by lazy {
+        ModalBottomSheet()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListener() {
 
+
+        binding.btnModal.setOnClickListener {
+            modalSheet.show(supportFragmentManager,ModalBottomSheet::class.java.simpleName)
+        }
+
         val sheetBehavior: BottomSheetBehavior<ConstraintLayout> =
             BottomSheetBehavior.from(binding.includeStandardSheet.standardSheet)
 
@@ -32,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 sheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 
         }
-        binding.btnModal.setOnClickListener { }
+
         binding.includeStandardSheet.imgStandard.setOnClickListener {
             sheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
         }

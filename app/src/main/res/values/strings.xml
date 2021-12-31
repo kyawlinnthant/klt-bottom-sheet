@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">klt_bottom_sheet</string>
+    <string name="title_standard">Hello! This is Header of Standard Bottom Sheet</string>
+    <string name="title_modal">Hello! This is Header of Modal Bottom Sheet</string>
 </resources>
